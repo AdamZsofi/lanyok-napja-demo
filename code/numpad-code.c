@@ -5,7 +5,7 @@
 // Gondoltam egy szamra - ez lesz x
 // Ebbol vonj le 2-t - ez lesz y
 // ha y paros, akkor y kétszerese lesz z
-// ha y paratlan, akkor y+1 lesz z  
+// ha y paratlan, akkor y+1 lesz z
 // x-et oszd el (z-y)-al
 // paros-e az eredmeny?
 
