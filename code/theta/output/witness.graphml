@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <key attr.name="sourcecodelang" attr.type="string" for="graph" id="sourcecodelang"/>
+    <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+    <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+    <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+    <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+    <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+    <key attr.name="programfile" attr.type="string" for="graph" id="programfile"/>
+    <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+    <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+    <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+    <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+    <key attr.name="control" attr.type="string" for="edge" id="control"/>
+    <key attr.name="startline" attr.type="string" for="edge" id="startline"/>
+    <key attr.name="endline" attr.type="string" for="edge" id="endline"/>
+    <key attr.name="startoffset" attr.type="string" for="edge" id="startoffset"/>
+    <key attr.name="endoffset" attr.type="string" for="edge" id="endoffset"/>
+    <key attr.name="enterLoopHead" attr.type="string" for="edge" id="enterLoopHead"/>
+    <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+    <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFromFunction"/>
+    <key attr.name="threadId" attr.type="string" for="edge" id="threadId"/>
+    <key attr.name="createThread" attr.type="string" for="edge" id="createThread"/>
+    <key attr.name="stmt" attr.type="string" for="edge" id="stmt"/>
+    <key attr.name="cSource" attr.type="string" for="edge" id="cSource"/>
+    <key attr.name="entry" attr.type="string" for="node" id="entry">
+        <default>false</default>
+    </key>
+    <key attr.name="sink" attr.type="string" for="node" id="sink">
+        <default>false</default>
+    </key>
+    <key attr.name="violation" attr.type="string" for="node" id="violation">
+        <default>false</default>
+    </key>
+    <key attr.name="locationStacks" attr.type="string" for="node" id="locationStacks"/>
+    <key attr.name="sourceLines" attr.type="string" for="node" id="sourceLines"/>
+    <key attr.name="state" attr.type="string" for="node" id="state"/>
+    <graph edgedefault="directed">
+        <data key="witness-type">violation_witness</data>
+        <data key="producer">theta</data>
+        <data key="sourcecodelang">C</data>
+        <data key="specification">CHECK( init(main()), LTL(G ! call(reach_error())) )</data>
+        <data key="programfile">/home/solarowl/Repositories/lanyok-napja-demo/code/theta/../theta-version-code.c</data>
+        <data key="programhash">8e984080461a564a701979a36ee9ea7f4e22fc8398cc47bf8d8661aa827d2cb7</data>
+        <data key="architecture">32bit</data>
+        <data key="creationtime">2024-04-23T15:21:05Z</data>
+        <node id="N0">
+            <data key="entry">true</data>
+        </node>
+        <node id="N1">
+            <data key="locationStacks">{0=[main_init {init}]}</data>
+            <data key="sourceLines">{0=[int main(){unsigned int x = __VERIFIER_nondet_int();if (x&gt;=0 &amp;&amp; x&lt;10) {int z;int y = x + 4;if (y%2 == 0) {z = 2*x;} else {z = y+2;}int eredmeny = 2*x / (z-y);if (z-y == 0) {reach_error();}return 0;}}]}</data>
+            <data key="state">(ExplState (T0::_::main::if0::z -2147483648))</data>
+        </node>
+        <node id="N2">
+            <data key="locationStacks">{0=[main_init {init}]}</data>
+            <data key="sourceLines">{0=[int main(){unsigned int x = __VERIFIER_nondet_int();if (x&gt;=0 &amp;&amp; x&lt;10) {int z;int y = x + 4;if (y%2 == 0) {z = 2*x;} else {z = y+2;}int eredmeny = 2*x / (z-y);if (z-y == 0) {reach_error();}return 0;}}]}</data>
+            <data key="state">(ExplState (T0::_::main::if0::z -2147483648))</data>
+        </node>
+        <node id="N3"/>
+        <node id="N4"/>
+        <node id="N5"/>
+        <node id="N6">
+            <data key="locationStacks">{0=[__loc_16 ]}</data>
+            <data key="sourceLines">{0=[]}</data>
+            <data key="state">(ExplState (T0::_::main::x 4) (T0::_::main::if0::z -2147483648) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+        </node>
+        <node id="N7"/>
+        <node id="N8"/>
+        <node id="N9"/>
+        <node id="N10">
+            <data key="locationStacks">{0=[__loc_34 ]}</data>
+            <data key="sourceLines">{0=[]}</data>
+            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z -2147483648) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+        </node>
+        <node id="N11"/>
+        <node id="N12"/>
+        <node id="N13">
+            <data key="locationStacks">{0=[__loc_73 ]}</data>
+            <data key="sourceLines">{0=[]}</data>
+            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z 8) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+        </node>
+        <node id="N14"/>
+        <node id="N15">
+            <data key="violation">true</data>
+            <data key="locationStacks">{0=[main_error {error}]}</data>
+            <data key="sourceLines">{0=[&lt;unknown&gt;]}</data>
+            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z 8) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+        </node>
+          
+        <edge source="N0" target="N1">
+            <data key="threadId">0</data>
+        </edge>
+        <edge source="N1" target="N2">
+            <data key="threadId">0</data>
+        </edge>
+        <edge source="N2" target="N3">
+            <data key="startline">6</data>
+            <data key="endline">6</data>
+            <data key="startoffset">97</data>
+            <data key="endoffset">119</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(havoc T0::_::call___VERIFIER_nondet_int_ret0)</data>
+            <data key="cSource">__VERIFIER_nondet_int()</data>
+        </edge>
+        <edge source="N3" target="N4">
+            <data key="startline">6</data>
+            <data key="endline">6</data>
+            <data key="startoffset">97</data>
+            <data key="endoffset">119</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assume (and (&gt;= T0::_::call___VERIFIER_nondet_int_ret0 -2147483648) (&lt;= T0::_::call___VERIFIER_nondet_int_ret0 2147483647)))</data>
+            <data key="cSource">__VERIFIER_nondet_int()</data>
+        </edge>
+        <edge source="N4" target="N5">
+            <data key="startline">6</data>
+            <data key="endline">6</data>
+            <data key="startoffset">80</data>
+            <data key="endoffset">120</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assign T0::_::main::x (mod T0::_::call___VERIFIER_nondet_int_ret0 4294967296))</data>
+            <data key="cSource">unsigned int x = __VERIFIER_nondet_int();</data>
+        </edge>
+        <edge source="N5" target="N6">
+            <data key="threadId">0</data>
+        </edge>
+        <edge source="N6" target="N7">
+            <data key="control">condition-true</data>
+            <data key="startline">7</data>
+            <data key="endline">7</data>
+            <data key="startoffset">130</data>
+            <data key="endoffset">141</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assume (/= (ite (and (/= 0 (ite (&gt;= (mod T0::_::main::x 4294967296) 0) 1 0)) (/= 0 (ite (&lt; (mod T0::_::main::x 4294967296) 10) 1 0))) 1 0) 0))</data>
+            <data key="cSource">x&gt;=0 &amp;&amp; x&lt;10</data>
+        </edge>
+        <edge source="N7" target="N8">
+            <data key="control">condition-true</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assume (and (&gt;= T0::_::main::if0::z -2147483648) (&lt;= T0::_::main::if0::z 2147483647)))</data>
+        </edge>
+        <edge source="N8" target="N9">
+            <data key="startline">9</data>
+            <data key="endline">9</data>
+            <data key="startoffset">169</data>
+            <data key="endoffset">182</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assign T0::_::main::if0::y (ite (&gt;= (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296) 2147483648) (- (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296) 4294967296) (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296)))</data>
+            <data key="cSource">int y = x + 4;</data>
+        </edge>
+        <edge source="N9" target="N10">
+            <data key="threadId">0</data>
+        </edge>
+        <edge source="N10" target="N11">
+            <data key="control">condition-true</data>
+            <data key="startline">11</data>
+            <data key="endline">11</data>
+            <data key="startoffset">197</data>
+            <data key="endoffset">204</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assume (/= (ite (= (ite (= (mod T0::_::main::if0::y 2) 0) (mod T0::_::main::if0::y 2) (ite (&gt;= T0::_::main::if0::y 0) (mod T0::_::main::if0::y 2) (- (mod T0::_::main::if0::y 2) 2))) 0) 1 0) 0))</data>
+            <data key="cSource">y%2 == 0</data>
+        </edge>
+        <edge source="N11" target="N12">
+            <data key="threadId">0</data>
+            <data key="stmt">(assign T0::_::main::if0::z (ite (&gt;= (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296) 2147483648) (- (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296) 4294967296) (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296)))</data>
+        </edge>
+        <edge source="N12" target="N13">
+            <data key="threadId">0</data>
+        </edge>
+        <edge source="N13" target="N14">
+            <data key="control">condition-true</data>
+            <data key="startline">18</data>
+            <data key="endline">18</data>
+            <data key="startoffset">327</data>
+            <data key="endoffset">334</data>
+            <data key="threadId">0</data>
+            <data key="stmt">(assume (/= (ite (= (+ T0::_::main::if0::z (- T0::_::main::if0::y)) 0) 1 0) 0))</data>
+            <data key="cSource">z-y == 0</data>
+        </edge>
+        <edge source="N14" target="N15"/>
+    </graph>
+</graphml>

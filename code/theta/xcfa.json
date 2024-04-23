@@ -1,0 +1,450 @@
+{
+  "name": "",
+  "vars": [],
+  "procedures": [
+    {
+      "name": "reach_error",
+      "params": [
+        {
+          "first": {
+            "type": "hu.bme.mit.theta.core.decl.VarDecl",
+            "value": {
+              "name": "reach_error_ret",
+              "type": "Int"
+            }
+          },
+          "second": {
+            "type": "hu.bme.mit.theta.xcfa.model.ParamDirection",
+            "value": "OUT"
+          }
+        }
+      ],
+      "vars": [],
+      "locs": [
+        "reach_error_init {init}",
+        "reach_error_final {final}"
+      ],
+      "edges": [
+        {
+          "source": "reach_error_init",
+          "target": "reach_error_final",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "params": [
+        {
+          "first": {
+            "type": "hu.bme.mit.theta.core.decl.VarDecl",
+            "value": {
+              "name": "main_ret",
+              "type": "Int"
+            }
+          },
+          "second": {
+            "type": "hu.bme.mit.theta.xcfa.model.ParamDirection",
+            "value": "OUT"
+          }
+        }
+      ],
+      "vars": [
+        {
+          "name": "main::x",
+          "type": "Int"
+        },
+        {
+          "name": "main::if0::z",
+          "type": "Int"
+        },
+        {
+          "name": "main::if0::y",
+          "type": "Int"
+        },
+        {
+          "name": "main::if0::eredmeny",
+          "type": "Int"
+        },
+        {
+          "name": "main_ret",
+          "type": "Int"
+        },
+        {
+          "name": "call___VERIFIER_nondet_uint_ret0",
+          "type": "Int"
+        }
+      ],
+      "locs": [
+        "main_init {init}",
+        "main_final {final}",
+        "__loc_16 ",
+        "__loc_34 ",
+        "__loc_77 ",
+        "main_error {error}"
+      ],
+      "edges": [
+        {
+          "source": "__loc_16",
+          "target": "main_final",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 7,
+                    "colNumberStart": 8,
+                    "lineNumberStop": 7,
+                    "colNumberStop": 19,
+                    "offsetStart": 141,
+                    "offsetEnd": 152,
+                    "sourceText": "x\u003e\u003d0 \u0026\u0026 x\u003c10"
+                  }
+                },
+                "content": "((assume (\u003d (ite (and (/\u003d 0 (ite (\u003e\u003d (mod main::x 4294967296) 0) 1 0)) (/\u003d 0 (ite (\u003c (mod main::x 4294967296) 10) 1 0))) 1 0) 0)))[choiceType\u003dALTERNATIVE_PATH]"
+              }
+            ]
+          }
+        },
+        {
+          "source": "__loc_16",
+          "target": "__loc_34",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 7,
+                    "colNumberStart": 8,
+                    "lineNumberStop": 7,
+                    "colNumberStop": 19,
+                    "offsetStart": 141,
+                    "offsetEnd": 152,
+                    "sourceText": "x\u003e\u003d0 \u0026\u0026 x\u003c10"
+                  }
+                },
+                "content": "((assume (/\u003d (ite (and (/\u003d 0 (ite (\u003e\u003d (mod main::x 4294967296) 0) 1 0)) (/\u003d 0 (ite (\u003c (mod main::x 4294967296) 10) 1 0))) 1 0) 0)))[choiceType\u003dMAIN_PATH]"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": -1,
+                    "colNumberStart": -1,
+                    "lineNumberStop": -1,
+                    "colNumberStop": -1,
+                    "offsetStart": -1,
+                    "offsetEnd": -1,
+                    "sourceText": ""
+                  }
+                },
+                "content": "((assume (and (\u003e\u003d main::if0::z -2147483648) (\u003c\u003d main::if0::z 2147483647))))[choiceType\u003dMAIN_PATH]"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 9,
+                    "colNumberStart": 8,
+                    "lineNumberStop": 9,
+                    "colNumberStop": 21,
+                    "offsetStart": 180,
+                    "offsetEnd": 193,
+                    "sourceText": "int y \u003d x - 2;"
+                  }
+                },
+                "content": "(assign main::if0::y (ite (\u003e\u003d (mod (+ (mod main::x 4294967296) -2) 4294967296) 2147483648) (- (mod (+ (mod main::x 4294967296) -2) 4294967296) 4294967296) (mod (+ (mod main::x 4294967296) -2) 4294967296)))"
+              }
+            ]
+          }
+        },
+        {
+          "source": "__loc_77",
+          "target": "main_final",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 19,
+                    "colNumberStart": 12,
+                    "lineNumberStop": 19,
+                    "colNumberStop": 28,
+                    "offsetStart": 341,
+                    "offsetEnd": 357,
+                    "sourceText": "eredmeny % 2 \u003d\u003d 0"
+                  }
+                },
+                "content": "((assume (/\u003d (ite (\u003d (ite (\u003d (mod main::if0::eredmeny 2) 0) (mod main::if0::eredmeny 2) (ite (\u003e\u003d main::if0::eredmeny 0) (mod main::if0::eredmeny 2) (- (mod main::if0::eredmeny 2) 2))) 0) 1 0) 0)))[choiceType\u003dMAIN_PATH]"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 20,
+                    "colNumberStart": 12,
+                    "lineNumberStop": 20,
+                    "colNumberStop": 19,
+                    "offsetStart": 374,
+                    "offsetEnd": 381,
+                    "sourceText": "return 0"
+                  }
+                },
+                "content": "(assign main_ret 0)"
+              }
+            ]
+          }
+        },
+        {
+          "source": "__loc_77",
+          "target": "main_error",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 19,
+                    "colNumberStart": 12,
+                    "lineNumberStop": 19,
+                    "colNumberStop": 28,
+                    "offsetStart": 341,
+                    "offsetEnd": 357,
+                    "sourceText": "eredmeny % 2 \u003d\u003d 0"
+                  }
+                },
+                "content": "((assume (\u003d (ite (\u003d (ite (\u003d (mod main::if0::eredmeny 2) 0) (mod main::if0::eredmeny 2) (ite (\u003e\u003d main::if0::eredmeny 0) (mod main::if0::eredmeny 2) (- (mod main::if0::eredmeny 2) 2))) 0) 1 0) 0)))[choiceType\u003dALTERNATIVE_PATH]"
+              }
+            ]
+          }
+        },
+        {
+          "source": "__loc_34",
+          "target": "__loc_77",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 11,
+                    "colNumberStart": 12,
+                    "lineNumberStop": 11,
+                    "colNumberStop": 19,
+                    "offsetStart": 208,
+                    "offsetEnd": 215,
+                    "sourceText": "y%2 \u003d\u003d 0"
+                  }
+                },
+                "content": "((assume (/\u003d (ite (\u003d (ite (\u003d (mod main::if0::y 2) 0) (mod main::if0::y 2) (ite (\u003e\u003d main::if0::y 0) (mod main::if0::y 2) (- (mod main::if0::y 2) 2))) 0) 1 0) 0)))[choiceType\u003dMAIN_PATH]"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": -1,
+                    "colNumberStart": -1,
+                    "lineNumberStop": -1,
+                    "colNumberStop": -1,
+                    "offsetStart": -1,
+                    "offsetEnd": -1,
+                    "sourceText": ""
+                  }
+                },
+                "content": "(assign main::if0::z (ite (\u003e\u003d (mod (+ (mod (* 2 (mod main::x 4294967296)) 4294967296) -8) 4294967296) 2147483648) (- (mod (+ (mod (* 2 (mod main::x 4294967296)) 4294967296) -8) 4294967296) 4294967296) (mod (+ (mod (* 2 (mod main::x 4294967296)) 4294967296) -8) 4294967296)))"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 17,
+                    "colNumberStart": 8,
+                    "lineNumberStop": 17,
+                    "colNumberStop": 36,
+                    "offsetStart": 298,
+                    "offsetEnd": 326,
+                    "sourceText": "int eredmeny \u003d (2*x) / (z-y);"
+                  }
+                },
+                "content": "(assign main::if0::eredmeny (ite (\u003e\u003d (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296) 2147483648) (- (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296) 4294967296) (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296)))"
+              }
+            ]
+          }
+        },
+        {
+          "source": "__loc_34",
+          "target": "__loc_77",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 11,
+                    "colNumberStart": 12,
+                    "lineNumberStop": 11,
+                    "colNumberStop": 19,
+                    "offsetStart": 208,
+                    "offsetEnd": 215,
+                    "sourceText": "y%2 \u003d\u003d 0"
+                  }
+                },
+                "content": "((assume (\u003d (ite (\u003d (ite (\u003d (mod main::if0::y 2) 0) (mod main::if0::y 2) (ite (\u003e\u003d main::if0::y 0) (mod main::if0::y 2) (- (mod main::if0::y 2) 2))) 0) 1 0) 0)))[choiceType\u003dALTERNATIVE_PATH]"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": -1,
+                    "colNumberStart": -1,
+                    "lineNumberStop": -1,
+                    "colNumberStop": -1,
+                    "offsetStart": -1,
+                    "offsetEnd": -1,
+                    "sourceText": ""
+                  }
+                },
+                "content": "(assign main::if0::z 4)"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 17,
+                    "colNumberStart": 8,
+                    "lineNumberStop": 17,
+                    "colNumberStop": 36,
+                    "offsetStart": 298,
+                    "offsetEnd": 326,
+                    "sourceText": "int eredmeny \u003d (2*x) / (z-y);"
+                  }
+                },
+                "content": "(assign main::if0::eredmeny (ite (\u003e\u003d (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296) 2147483648) (- (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296) 4294967296) (mod (ite (\u003e\u003d (mod (* 2 (mod main::x 4294967296)) 4294967296) 0) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) (ite (/\u003d (mod (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 0) (ite (\u003e\u003d (mod (+ main::if0::z (- main::if0::y)) 4294967296) 0) (+ (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1) (- (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)) 1)) (div (mod (* 2 (mod main::x 4294967296)) 4294967296) (mod (+ main::if0::z (- main::if0::y)) 4294967296)))) 4294967296)))"
+              }
+            ]
+          }
+        },
+        {
+          "source": "main_init",
+          "target": "__loc_16",
+          "label": {
+            "type": "hu.bme.mit.theta.xcfa.model.SequenceLabel",
+            "metadata": {
+              "type": "hu.bme.mit.theta.xcfa.model.EmptyMetaData",
+              "content": {}
+            },
+            "labels": [
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 6,
+                    "colNumberStart": 21,
+                    "lineNumberStop": 6,
+                    "colNumberStop": 44,
+                    "offsetStart": 107,
+                    "offsetEnd": 130,
+                    "sourceText": "__VERIFIER_nondet_uint()"
+                  }
+                },
+                "content": "(havoc call___VERIFIER_nondet_uint_ret0)"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 6,
+                    "colNumberStart": 21,
+                    "lineNumberStop": 6,
+                    "colNumberStop": 44,
+                    "offsetStart": 107,
+                    "offsetEnd": 130,
+                    "sourceText": "__VERIFIER_nondet_uint()"
+                  }
+                },
+                "content": "(assume (and (\u003e\u003d call___VERIFIER_nondet_uint_ret0 0) (\u003c\u003d call___VERIFIER_nondet_uint_ret0 4294967295)))"
+              },
+              {
+                "type": "hu.bme.mit.theta.xcfa.model.StmtLabel",
+                "metadata": {
+                  "type": "hu.bme.mit.theta.c2xcfa.CMetaData",
+                  "content": {
+                    "lineNumberStart": 6,
+                    "colNumberStart": 4,
+                    "lineNumberStop": 6,
+                    "colNumberStop": 45,
+                    "offsetStart": 90,
+                    "offsetEnd": 131,
+                    "sourceText": "unsigned int x \u003d __VERIFIER_nondet_uint();"
+                  }
+                },
+                "content": "(assign main::x (mod call___VERIFIER_nondet_uint_ret0 4294967296))"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "initProcedures": [
+    {
+      "params": [],
+      "procedure": "main"
+    }
+  ]
+}
