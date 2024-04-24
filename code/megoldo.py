@@ -6,4 +6,5 @@ for x in range(1, 10):
     else:
         z = y+2
 
-    print(2*x,"/",2*(z-y))
+    print("z,y",z,y)
+    #print(4*x,"/",(z-y))

@@ -30,17 +30,9 @@ void setup() {
 
 int calculate(int num) {
   int x = num;            // Kapunk egy szamot
-  int z;
-
-  int y = x + 4;
-
-  if(y%2 == 0) {          // ha paros:
-    z = 2*x;
-  } else {                // ha paratlan:
-    z = y+2;
-  }
-
-  int eredmeny =  4*x / (z-y);
+  int y = num - 4;
+  int eredmeny = x/abs(y);
+  //Serial.println(eredmeny);
   return eredmeny;
 }
 
@@ -83,14 +75,14 @@ void loop() {
       // Turn on green LED if count is odd, red LED if count is even
       int result = calculate(count);
       //Serial.println(result);
-      digitalWrite(ledGreenPin, result%2==0);
-      digitalWrite(ledRedPin, result%2!=0);
+      digitalWrite(ledGreenPin, result>=0);
+      digitalWrite(ledRedPin, result<0);
     } else {
       // Turn off LEDs
       digitalWrite(ledGreenPin, LOW);
       digitalWrite(ledRedPin, LOW);
-      sevSeg.setNumber(1);
-      count = 1;
+      //sevSeg.setNumber(1);
+      //count = 1;
     }
   }
   sevSeg.refreshDisplay();
