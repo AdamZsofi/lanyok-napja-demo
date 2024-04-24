@@ -29,10 +29,10 @@ void setup() {
 }
 
 int calculate(int num) {
-  int x = num;            // Kapunk egy szamot
+  int x = num;
   int y = num - 4;
   int eredmeny = x/abs(y);
-  //Serial.println(eredmeny);
+  Serial.println(eredmeny);
   return eredmeny;
 }
 

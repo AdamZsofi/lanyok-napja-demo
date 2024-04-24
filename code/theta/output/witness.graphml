@@ -40,21 +40,21 @@
         <data key="sourcecodelang">C</data>
         <data key="specification">CHECK( init(main()), LTL(G ! call(reach_error())) )</data>
         <data key="programfile">/home/solarowl/Repositories/lanyok-napja-demo/code/theta/../theta-version-code.c</data>
-        <data key="programhash">8e984080461a564a701979a36ee9ea7f4e22fc8398cc47bf8d8661aa827d2cb7</data>
+        <data key="programhash">d52b8c3372920c4f5a11536746dd196c91d1e35a22a4651e61624f479e53c3c3</data>
         <data key="architecture">32bit</data>
-        <data key="creationtime">2024-04-23T15:21:05Z</data>
+        <data key="creationtime">2024-04-24T12:27:48Z</data>
         <node id="N0">
             <data key="entry">true</data>
         </node>
         <node id="N1">
             <data key="locationStacks">{0=[main_init {init}]}</data>
-            <data key="sourceLines">{0=[int main(){unsigned int x = __VERIFIER_nondet_int();if (x&gt;=0 &amp;&amp; x&lt;10) {int z;int y = x + 4;if (y%2 == 0) {z = 2*x;} else {z = y+2;}int eredmeny = 2*x / (z-y);if (z-y == 0) {reach_error();}return 0;}}]}</data>
-            <data key="state">(ExplState (T0::_::main::if0::z -2147483648))</data>
+            <data key="sourceLines">{0=[int main(){unsigned int num = __VERIFIER_nondet_int();if (num&gt;=1 &amp;&amp; num&lt;10) {int x = num;int y = num - 4;if (y == 0) {reach_error();}int eredmeny;if (y &lt;= 0) {eredmeny = x/y;} else {eredmeny = x/-y;}return 0;}}]}</data>
+            <data key="state">(ExplState)</data>
         </node>
         <node id="N2">
             <data key="locationStacks">{0=[main_init {init}]}</data>
-            <data key="sourceLines">{0=[int main(){unsigned int x = __VERIFIER_nondet_int();if (x&gt;=0 &amp;&amp; x&lt;10) {int z;int y = x + 4;if (y%2 == 0) {z = 2*x;} else {z = y+2;}int eredmeny = 2*x / (z-y);if (z-y == 0) {reach_error();}return 0;}}]}</data>
-            <data key="state">(ExplState (T0::_::main::if0::z -2147483648))</data>
+            <data key="sourceLines">{0=[int main(){unsigned int num = __VERIFIER_nondet_int();if (num&gt;=1 &amp;&amp; num&lt;10) {int x = num;int y = num - 4;if (y == 0) {reach_error();}int eredmeny;if (y &lt;= 0) {eredmeny = x/y;} else {eredmeny = x/-y;}return 0;}}]}</data>
+            <data key="state">(ExplState)</data>
         </node>
         <node id="N3"/>
         <node id="N4"/>
@@ -62,29 +62,22 @@
         <node id="N6">
             <data key="locationStacks">{0=[__loc_16 ]}</data>
             <data key="sourceLines">{0=[]}</data>
-            <data key="state">(ExplState (T0::_::main::x 4) (T0::_::main::if0::z -2147483648) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+            <data key="state">(ExplState (T0::_::main::num 4) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
         </node>
         <node id="N7"/>
         <node id="N8"/>
         <node id="N9"/>
         <node id="N10">
-            <data key="locationStacks">{0=[__loc_34 ]}</data>
+            <data key="locationStacks">{0=[__loc_37 ]}</data>
             <data key="sourceLines">{0=[]}</data>
-            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z -2147483648) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+            <data key="state">(ExplState (T0::_::main::if0::y 0) (T0::_::main::num 4) (T0::_::main::if0::x 4) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
         </node>
         <node id="N11"/>
-        <node id="N12"/>
-        <node id="N13">
-            <data key="locationStacks">{0=[__loc_73 ]}</data>
-            <data key="sourceLines">{0=[]}</data>
-            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z 8) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
-        </node>
-        <node id="N14"/>
-        <node id="N15">
+        <node id="N12">
             <data key="violation">true</data>
             <data key="locationStacks">{0=[main_error {error}]}</data>
             <data key="sourceLines">{0=[&lt;unknown&gt;]}</data>
-            <data key="state">(ExplState (T0::_::main::if0::y 8) (T0::_::main::x 4) (T0::_::main::if0::z 8) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
+            <data key="state">(ExplState (T0::_::main::if0::y 0) (T0::_::main::num 4) (T0::_::main::if0::x 4) (T0::_::call___VERIFIER_nondet_int_ret0 4))</data>
         </node>
           
         <edge source="N0" target="N1">
@@ -96,8 +89,8 @@
         <edge source="N2" target="N3">
             <data key="startline">6</data>
             <data key="endline">6</data>
-            <data key="startoffset">97</data>
-            <data key="endoffset">119</data>
+            <data key="startoffset">99</data>
+            <data key="endoffset">121</data>
             <data key="threadId">0</data>
             <data key="stmt">(havoc T0::_::call___VERIFIER_nondet_int_ret0)</data>
             <data key="cSource">__VERIFIER_nondet_int()</data>
@@ -105,8 +98,8 @@
         <edge source="N3" target="N4">
             <data key="startline">6</data>
             <data key="endline">6</data>
-            <data key="startoffset">97</data>
-            <data key="endoffset">119</data>
+            <data key="startoffset">99</data>
+            <data key="endoffset">121</data>
             <data key="threadId">0</data>
             <data key="stmt">(assume (and (&gt;= T0::_::call___VERIFIER_nondet_int_ret0 -2147483648) (&lt;= T0::_::call___VERIFIER_nondet_int_ret0 2147483647)))</data>
             <data key="cSource">__VERIFIER_nondet_int()</data>
@@ -115,10 +108,10 @@
             <data key="startline">6</data>
             <data key="endline">6</data>
             <data key="startoffset">80</data>
-            <data key="endoffset">120</data>
+            <data key="endoffset">122</data>
             <data key="threadId">0</data>
-            <data key="stmt">(assign T0::_::main::x (mod T0::_::call___VERIFIER_nondet_int_ret0 4294967296))</data>
-            <data key="cSource">unsigned int x = __VERIFIER_nondet_int();</data>
+            <data key="stmt">(assign T0::_::main::num (mod T0::_::call___VERIFIER_nondet_int_ret0 4294967296))</data>
+            <data key="cSource">unsigned int num = __VERIFIER_nondet_int();</data>
         </edge>
         <edge source="N5" target="N6">
             <data key="threadId">0</data>
@@ -127,25 +120,29 @@
             <data key="control">condition-true</data>
             <data key="startline">7</data>
             <data key="endline">7</data>
-            <data key="startoffset">130</data>
-            <data key="endoffset">141</data>
+            <data key="startoffset">132</data>
+            <data key="endoffset">147</data>
             <data key="threadId">0</data>
-            <data key="stmt">(assume (/= (ite (and (/= 0 (ite (&gt;= (mod T0::_::main::x 4294967296) 0) 1 0)) (/= 0 (ite (&lt; (mod T0::_::main::x 4294967296) 10) 1 0))) 1 0) 0))</data>
-            <data key="cSource">x&gt;=0 &amp;&amp; x&lt;10</data>
+            <data key="stmt">(assume (/= (ite (and (/= 0 (ite (&gt;= (mod T0::_::main::num 4294967296) 1) 1 0)) (/= 0 (ite (&lt; (mod T0::_::main::num 4294967296) 10) 1 0))) 1 0) 0))</data>
+            <data key="cSource">num&gt;=1 &amp;&amp; num&lt;10</data>
         </edge>
         <edge source="N7" target="N8">
-            <data key="control">condition-true</data>
+            <data key="startline">8</data>
+            <data key="endline">8</data>
+            <data key="startoffset">160</data>
+            <data key="endoffset">171</data>
             <data key="threadId">0</data>
-            <data key="stmt">(assume (and (&gt;= T0::_::main::if0::z -2147483648) (&lt;= T0::_::main::if0::z 2147483647)))</data>
+            <data key="stmt">(assign T0::_::main::if0::x (ite (&gt;= T0::_::main::num 2147483648) (- T0::_::main::num 4294967296) T0::_::main::num))</data>
+            <data key="cSource">int x = num;</data>
         </edge>
         <edge source="N8" target="N9">
             <data key="startline">9</data>
             <data key="endline">9</data>
-            <data key="startoffset">169</data>
-            <data key="endoffset">182</data>
+            <data key="startoffset">181</data>
+            <data key="endoffset">196</data>
             <data key="threadId">0</data>
-            <data key="stmt">(assign T0::_::main::if0::y (ite (&gt;= (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296) 2147483648) (- (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296) 4294967296) (mod (+ (mod T0::_::main::x 4294967296) 4) 4294967296)))</data>
-            <data key="cSource">int y = x + 4;</data>
+            <data key="stmt">(assign T0::_::main::if0::y (ite (&gt;= (mod (+ (mod T0::_::main::num 4294967296) -4) 4294967296) 2147483648) (- (mod (+ (mod T0::_::main::num 4294967296) -4) 4294967296) 4294967296) (mod (+ (mod T0::_::main::num 4294967296) -4) 4294967296)))</data>
+            <data key="cSource">int y = num - 4;</data>
         </edge>
         <edge source="N9" target="N10">
             <data key="threadId">0</data>
@@ -154,29 +151,12 @@
             <data key="control">condition-true</data>
             <data key="startline">11</data>
             <data key="endline">11</data>
-            <data key="startoffset">197</data>
-            <data key="endoffset">204</data>
+            <data key="startoffset">211</data>
+            <data key="endoffset">216</data>
             <data key="threadId">0</data>
-            <data key="stmt">(assume (/= (ite (= (ite (= (mod T0::_::main::if0::y 2) 0) (mod T0::_::main::if0::y 2) (ite (&gt;= T0::_::main::if0::y 0) (mod T0::_::main::if0::y 2) (- (mod T0::_::main::if0::y 2) 2))) 0) 1 0) 0))</data>
-            <data key="cSource">y%2 == 0</data>
+            <data key="stmt">(assume (/= (ite (= T0::_::main::if0::y 0) 1 0) 0))</data>
+            <data key="cSource">y == 0</data>
         </edge>
-        <edge source="N11" target="N12">
-            <data key="threadId">0</data>
-            <data key="stmt">(assign T0::_::main::if0::z (ite (&gt;= (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296) 2147483648) (- (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296) 4294967296) (mod (* 2 (mod T0::_::main::x 4294967296)) 4294967296)))</data>
-        </edge>
-        <edge source="N12" target="N13">
-            <data key="threadId">0</data>
-        </edge>
-        <edge source="N13" target="N14">
-            <data key="control">condition-true</data>
-            <data key="startline">18</data>
-            <data key="endline">18</data>
-            <data key="startoffset">327</data>
-            <data key="endoffset">334</data>
-            <data key="threadId">0</data>
-            <data key="stmt">(assume (/= (ite (= (+ T0::_::main::if0::z (- T0::_::main::if0::y)) 0) 1 0) 0))</data>
-            <data key="cSource">z-y == 0</data>
-        </edge>
-        <edge source="N14" target="N15"/>
+        <edge source="N11" target="N12"/>
     </graph>
 </graphml>

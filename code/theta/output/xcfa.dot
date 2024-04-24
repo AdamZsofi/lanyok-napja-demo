@@ -12,16 +12,16 @@ label="main";
 main_init[];
 main_final[];
 __loc_16[];
-__loc_34[];
-__loc_73[];
+__loc_37[];
+__loc_55[];
 main_error[];
-__loc_16 -> main_final[label="[((assume (= (ite (and (/= 0 (ite (>= (mod main::x 4294967296) 0) 1 0)) (/= 0 (ite (< (mod main::x 4294967296) 10) 1 0))) 1 0) 0)))[choiceType=ALTERNATIVE_PATH]]"];
-__loc_16 -> __loc_34[label="[((assume (/= (ite (and (/= 0 (ite (>= (mod main::x 4294967296) 0) 1 0)) (/= 0 (ite (< (mod main::x 4294967296) 10) 1 0))) 1 0) 0)))[choiceType=MAIN_PATH],((assume (and (>= main::if0::z -2147483648) (<= main::if0::z 2147483647))))[choiceType=MAIN_PATH],(assign main::if0::y (ite (>= (mod (+ (mod main::x 4294967296) 4) 4294967296) 2147483648) (- (mod (+ (mod main::x 4294967296) 4) 4294967296) 4294967296) (mod (+ (mod main::x 4294967296) 4) 4294967296)))]"];
-__loc_73 -> main_error[label="[((assume (/= (ite (= (+ main::if0::z (- main::if0::y)) 0) 1 0) 0)))[choiceType=MAIN_PATH]]"];
-__loc_73 -> main_final[label="[((assume (= (ite (= (+ main::if0::z (- main::if0::y)) 0) 1 0) 0)))[choiceType=ALTERNATIVE_PATH],(assign main_ret 0)]"];
-__loc_34 -> __loc_73[label="[((assume (/= (ite (= (ite (= (mod main::if0::y 2) 0) (mod main::if0::y 2) (ite (>= main::if0::y 0) (mod main::if0::y 2) (- (mod main::if0::y 2) 2))) 0) 1 0) 0)))[choiceType=MAIN_PATH],(assign main::if0::z (ite (>= (mod (* 2 (mod main::x 4294967296)) 4294967296) 2147483648) (- (mod (* 2 (mod main::x 4294967296)) 4294967296) 4294967296) (mod (* 2 (mod main::x 4294967296)) 4294967296)))]"];
-__loc_34 -> __loc_73[label="[((assume (= (ite (= (ite (= (mod main::if0::y 2) 0) (mod main::if0::y 2) (ite (>= main::if0::y 0) (mod main::if0::y 2) (- (mod main::if0::y 2) 2))) 0) 1 0) 0)))[choiceType=ALTERNATIVE_PATH],(assign main::if0::z (+ main::if0::y 2))]"];
-main_init -> __loc_16[label="[(havoc call___VERIFIER_nondet_int_ret0),(assume (and (>= call___VERIFIER_nondet_int_ret0 -2147483648) (<= call___VERIFIER_nondet_int_ret0 2147483647))),(assign main::x (mod call___VERIFIER_nondet_int_ret0 4294967296))]"];
+__loc_16 -> main_final[label="[((assume (= (ite (and (/= 0 (ite (>= (mod main::num 4294967296) 1) 1 0)) (/= 0 (ite (< (mod main::num 4294967296) 10) 1 0))) 1 0) 0)))[choiceType=ALTERNATIVE_PATH]]"];
+__loc_16 -> __loc_37[label="[((assume (/= (ite (and (/= 0 (ite (>= (mod main::num 4294967296) 1) 1 0)) (/= 0 (ite (< (mod main::num 4294967296) 10) 1 0))) 1 0) 0)))[choiceType=MAIN_PATH],(assign main::if0::x (ite (>= main::num 2147483648) (- main::num 4294967296) main::num)),(assign main::if0::y (ite (>= (mod (+ (mod main::num 4294967296) -4) 4294967296) 2147483648) (- (mod (+ (mod main::num 4294967296) -4) 4294967296) 4294967296) (mod (+ (mod main::num 4294967296) -4) 4294967296)))]"];
+__loc_37 -> main_error[label="[((assume (/= (ite (= main::if0::y 0) 1 0) 0)))[choiceType=MAIN_PATH]]"];
+__loc_37 -> __loc_55[label="[((assume (= (ite (= main::if0::y 0) 1 0) 0)))[choiceType=ALTERNATIVE_PATH],((assume (and (>= main::if0::eredmeny -2147483648) (<= main::if0::eredmeny 2147483647))))[choiceType=MAIN_PATH]]"];
+__loc_55 -> main_final[label="[((assume (/= (ite (<= main::if0::y 0) 1 0) 0)))[choiceType=MAIN_PATH],(assign main::if0::eredmeny (ite (>= main::if0::x 0) (div main::if0::x main::if0::y) (ite (/= (mod main::if0::x main::if0::y) 0) (ite (>= main::if0::y 0) (+ (div main::if0::x main::if0::y) 1) (- (div main::if0::x main::if0::y) 1)) (div main::if0::x main::if0::y)))),(assign main_ret 0)]"];
+__loc_55 -> main_final[label="[((assume (= (ite (<= main::if0::y 0) 1 0) 0)))[choiceType=ALTERNATIVE_PATH],(assign main::if0::eredmeny (ite (>= main::if0::x 0) (div main::if0::x (- main::if0::y)) (ite (/= (mod main::if0::x (- main::if0::y)) 0) (ite (>= (- main::if0::y) 0) (+ (div main::if0::x (- main::if0::y)) 1) (- (div main::if0::x (- main::if0::y)) 1)) (div main::if0::x (- main::if0::y))))),(assign main_ret 0)]"];
+main_init -> __loc_16[label="[(havoc call___VERIFIER_nondet_int_ret0),(assume (and (>= call___VERIFIER_nondet_int_ret0 -2147483648) (<= call___VERIFIER_nondet_int_ret0 2147483647))),(assign main::num (mod call___VERIFIER_nondet_int_ret0 4294967296))]"];
 
 }
 }

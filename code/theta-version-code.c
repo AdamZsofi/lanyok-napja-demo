@@ -3,20 +3,20 @@ void reach_error() {}
 
 int main()
 {
-    unsigned int x = __VERIFIER_nondet_int();
-    if (x>=0 && x<10) {
-        int z;
-        int y = x + 4;
+    unsigned int num = __VERIFIER_nondet_int();
+    if (num>=1 && num<10) {
+        int x = num;
+        int y = num - 4;
 
-        if (y%2 == 0) {
-            z = 2*x;
-        } else {
-            z = y+2;
+        if (y == 0) {
+            reach_error();
         }
 
-        int eredmeny = 2*x / (z-y);
-        if (z-y == 0) {
-            reach_error();
+        int eredmeny;
+        if (y <= 0) {
+            eredmeny = x/y;
+        } else {
+            eredmeny = x/-y;
         }
 
         return 0;
